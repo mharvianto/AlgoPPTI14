@@ -17,10 +17,10 @@
 [type data] [nama variable]
 
 Ex:
-```
+```c++
 int angka;
 ```
 
-```
+```c++
 char nama[50];
 ```
