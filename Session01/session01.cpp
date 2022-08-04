@@ -1,16 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
 // stdio -> standard input output library
 
 // mengetik: 30-40 wpm
 // single line comment
-/* 
+/*
 multiple line comment
 */
 
 // function
 // int  -> return type
 // main -> name fuction
-int main() {
+int main()
+{
     /*
     input
     output
@@ -31,7 +32,7 @@ int main() {
     %% -> %
     \a -> alert
     */
-    /* 
+    /*
     type data:
     %d  short
     %d  int     angka bulat
@@ -41,10 +42,10 @@ int main() {
     %s  char[]  array of char/kata/string
 
     %f  float   angka decimal
-    %lf double  
+    %lf double
     */
     // input
-    // variable -> [type data] [name] 
+    // variable -> [type data] [name]
     int angka;
     scanf("%d", &angka);
     printf("Angka: %d\n", angka);

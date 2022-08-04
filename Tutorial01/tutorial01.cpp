@@ -1,12 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main() {
+int main()
+{
     printf("Hello World!\n");
     char nama[50], buff;
-    scanf("%[^\n]", nama); getchar();
+    scanf("%[^\n]", nama);
+    getchar();
     // selama bukan new line
     printf("Nama: %s\n", nama);
-    scanf("%[a-zA-Z ]", nama); getchar(); // scanf("%c", &buff);
+    scanf("%[a-zA-Z ]", nama);
+    getchar(); // scanf("%c", &buff);
     // hanya a-z, A-Z, dan space
     // RegEx => Regular Expression
     printf("Nama: %s\n", nama);
