@@ -21,6 +21,8 @@ Ex:
 printf("Hello world!\n");
 ```
 
+Ref: https://cplusplus.com/reference/cstdio/printf/
+
 ## Escape Sequence
 
 | Escape Sequence | Arti           |
