@@ -5,4 +5,4 @@
 2. [Session 02](/Session02/readme.md)
 
 ## Tutorial
-1. [Tutorial 01](/Tutorial)
+1. [Tutorial 01](/Tutorial01)
