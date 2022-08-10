@@ -32,15 +32,15 @@ Ref: https://cplusplus.com/reference/cstdio/printf/
 
 ## Type Data
 
-| Type Data | Description               | Format |
-| --------- | ------------------------- | :----: |
-| `short`   | Angka bulat               |  `%d`  |
-| `int`     | Angka bulat               |  `%d`  |
-| `long`    | Angka bulat               | `%ld`  |
-| `char`    | Huruf/character           |  `%c`  |
-| `char[]`  | string/array of char/word |  `%s`  |
-| `float`   | Angka desimal             |  `%f`  |
-| `double`  | Angka desimal             | `%lf`  |
+| Type Data | Description               | Format | Size   |
+| --------- | ------------------------- | :----: | ------ |
+| `short`   | Angka bulat               |  `%d`  | 2 byte |
+| `int`     | Angka bulat               |  `%d`  | 4 byte |
+| `long`    | Angka bulat               | `%ld`  | 8 byte |
+| `char`    | Huruf/character           |  `%c`  | 1 byte |
+| `char[]`  | string/array of char/word |  `%s`  |        |
+| `float`   | Angka desimal             |  `%f`  | 4 byte |
+| `double`  | Angka desimal             | `%lf`  | 8 byte |
 
 ## Variabel
 
