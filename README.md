@@ -6,3 +6,4 @@
 
 ## Tutorial
 1. [Tutorial 01](/Tutorial01)
+2. [Tutorial 02](/Tutorial02)
