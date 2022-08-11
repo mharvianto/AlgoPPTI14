@@ -78,3 +78,13 @@ switch(angka) {
     case 9: printf("Sembilan\n"); break;
 }
 ```
+
+## Looping / Iteration
+
+### `for`
+
+### `while`
+
+### `do-while`
+
+Challenge: [link](challenge.md) 
