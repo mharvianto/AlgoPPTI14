@@ -1,4 +1,7 @@
 {
     "workbench.colorTheme": "Default Light+",
-    "window.zoomLevel": 2
+    "window.zoomLevel": 1,
+    "files.associations": {
+        "cstring": "cpp"
+    }
 }
