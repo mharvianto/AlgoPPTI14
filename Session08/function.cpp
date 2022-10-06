@@ -38,5 +38,6 @@ int main(){
     printf("%d\n", abs(-50));
     char kata[] = "dexter";
     printf("%s\n", upper(kata));
+    printf("%s\n", kata);
     return 0;
 }
