@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>body { padding: 0; margin: 0; } </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+      const c = document.getElementById("canvas"),
+        size = 30 * 2,
+        ctx = c.getContext("2d");
+      let h = c.height = document.body.offsetHeight * 2,
+        w = c.width = document.body.offsetWidth * 2,
+        x = size,
+        y = size;
+      c.style = "height: 100vh; width: 100vw;"
+      document.body.focus();
+      document.body.addEventListener("keydown", moveBox);
+
+      function moveBox (ev) {
+        if(ev.key == 'a' && x - size >= 0) {
+          x += -size;
+        } else if(ev.key == 'd' && x + size * 2 <= w) {
+          x += size;
+        } else if(ev.key == 'w' && y - size >= 0) {
+          y += -size;
+        } else if(ev.key == 's' && y + size * 2 <= h) {
+          y += size;
+        }
+      }
+
+      // render interval 
+      setInterval(render, 1000 / 60);
+
+      function render() {
+        // clear canvas
+        ctx.clearRect(0, 0, w, h);
+        // draw rectangle
+        ctx.fillStyle = `rgb(${ Math.floor(x*255/w) }, 128, ${ Math.floor(y*255/h) })`;
+        ctx.fillRect(x, y, size, size);
+        // draw text
+        ctx.fillStyle = "#000000";
+        ctx.font = "16pt arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("Press A, S, W, and D to move the box.", w/2, h/2);
+      }
+    </script>
+  </body>
+</html>
