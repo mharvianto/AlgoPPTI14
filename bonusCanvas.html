@@ -15,9 +15,16 @@
       let h = c.height = document.body.offsetHeight * scale,
         w = c.width = document.body.offsetWidth * scale,
         x = size,
-        y = size;
+        y = size,
+        ball = [];
       document.body.focus();
       document.body.addEventListener("keydown", moveBox);
+
+      for (let i = 0; i < 100; i++) {
+        ball.push({x: parseInt(Math.random() * w), y: parseInt(Math.random() * h), ax: 5, ay: 5,
+        move: function(){}
+      });
+      }
 
       function moveBox (ev) {
         if(ev.key == 'a' && x - size >= 0) {
@@ -31,12 +38,26 @@
         }
       }
 
+      setInterval(ballMove, 10);
+
+      function ballMove() {
+        ball.x += ball.ax;
+        ball.y += ball.ay;
+        if(ball.x - size < 0 || ball.x + size > w) ball.ax *= -1;
+        if(ball.y - size < 0 || ball.y + size > h) ball.ay *= -1;
+      }
+
       // render interval 
       setInterval(render, 1000 / 60);
 
       function render() {
         // clear canvas
         ctx.clearRect(0, 0, w, h);
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, size/2, 0, 2 * Math.PI, false);
+        ctx.fillStyle = `rgb(${ Math.floor(x*255/w) }, 128, ${ Math.floor(y*255/h) })`;
+        ctx.fill();
+
         // draw rectangle
         ctx.fillStyle = `rgb(${ Math.floor(x*255/w) }, 128, ${ Math.floor(y*255/h) })`;
         ctx.fillRect(x, y, size, size);
