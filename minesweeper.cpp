@@ -18,7 +18,7 @@ int countNearBomb(char board[N+5][N+5], int x, int y) {
     int count = 0;
     for (int i = x-1; i <= x+1; i++) {
         for (int j = y-1; j <= y+1; j++) {
-            if(i >= 0 && i < 10 && j >= 0 && j < 10 && board[i][j] == '*') {
+            if (i >= 0 && i < 10 && j >= 0 && j < 10 && board[i][j] == '*') {
                 count++;
             }
         }   
@@ -31,7 +31,7 @@ void countBomb(char board[N+5][N+5]) {
         for (int j = 0; j < N; j++) {
             if (board[i][j] != '*') {
                 int count = countNearBomb(board, i, j);
-                if(count == 0) board[i][j] = '.';
+                if (count == 0) board[i][j] = '.';
                 else board[i][j] = '0' + count;
             }
         }
@@ -44,10 +44,11 @@ void hideDisplay(char display[N+5][N+5]){
         }
     }
 }
+
 void printBoard(char board[N+5][N+5], char display[N+5][N+5]) {
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n   ");
     for (int i = 0; i < N; i++) {
-        if((i+1) % 10 == 0) printf("%d", (i+1)/10);
+        if ((i+1) % 10 == 0) printf("%d", (i+1)/10);
         else printf(" ");
     }
     printf("\n");
@@ -59,7 +60,7 @@ void printBoard(char board[N+5][N+5], char display[N+5][N+5]) {
     for (int i = 0; i < N; i++) {
         printf("%2d ", i+1);
         for (int j = 0; j < N; j++) {
-            if(display[i][j] == 0) printf("#");
+            if (display[i][j] == 0) printf("#");
             else printf("%c", board[i][j]);
         }
         printf("\n");
@@ -105,7 +106,7 @@ int main() {
         } else {
             count += floodFill(board, display, x-1, y-1);
         }
-        if(count == N * N - N) {
+        if (count == N * N - N) {
             printBoard(board, display);
             printf("You Win...\n");
             break;
