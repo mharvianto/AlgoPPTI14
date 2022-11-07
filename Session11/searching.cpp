@@ -25,19 +25,35 @@ int binarySearch (int arr[], int n, int find) {
 }
 
 int main() {
-    // linear -> n
-    // binary -> log2(n)
+    // kompleksitas
+    // linear -> O(n)
+    // binary -> O(log2(n))
+    // quick sort -> O(n * log2(2))
 
-    // quick -> n * log2(2)
+    // kompleksitas melakukan pencari 1 kali menggunakan binary search pada data yg tidak terurut (n = 10000)
+    // quick sort + binary search
+    // O(n*log2(n)) + O(log2(n)) => 10000 * 13 + 13 => 130013
 
-    // quick + binary
-    // n log n + log n -> n log n
+    // kompleksitas melakukan pencari 1 kali menggunakan linear search pada data yg tidak terurut (n = 10000)
+    // linear search
+    // O(n) => 10000
 
-    // quick + 1000 * binary
-    // n log n + 1000 * log n = 146164
+    // terlihat pada nilai di atas, lebih efektif menggunakan linear search apabila cuma 1 kali melakukan search
 
-    // 1000 * linaer
-    // 1000 * n = 10000 * 1000 = 10000000
+    // kompleksitas melakukan pencari 1000 kali menggunakan binary search pada data yg tidak terurut (n = 10000)
+    // quick sort + 1000 x binary search
+    // n log n + 1000 * log n => 10000 * 13 + 1000 * 13 => 143000
+
+    // kompleksitas melakukan pencari 1000 kali menggunakan linear search pada data yg tidak terurut (n = 10000)
+    // 1000 x linaer search
+    // 1000 * n = 1000 * 10000 = 10000000
+
+    // terlihat pada nilai di atas, lebih efektif menggunakan binary search apabila cuma 1000 kali melakukan search pada data yg sama
+
+    // Linear Search        : 00:00:00.0003526
+    // Binary Search        : 00:00:00.0270795
+    // 1000 x Linear Search : 00:00:00.2995440
+    // 1000 x Binary Search : 00:00:00.0275389
 
     return 0;
 }

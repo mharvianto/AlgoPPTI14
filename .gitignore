@@ -1,3 +1,5 @@
 a.out
 *.exe
 .vscode
+obj
+bin
