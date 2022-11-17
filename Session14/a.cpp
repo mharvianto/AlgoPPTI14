@@ -18,7 +18,7 @@ long long f() {
             sum -= (c[i] - c[j]);
             j--;
         }
-        if (sum > max && sum < m) {
+        if (sum > max && sum <= m) {
             max = sum;
         }
     }
